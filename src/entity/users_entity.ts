@@ -1,5 +1,6 @@
 import { SharedProp } from './sharedProp.helper';
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { PostsEntity } from './posts.entity';
 
 @Entity({ name: 'users' })
 export class UsersEntity extends SharedProp {
@@ -23,4 +24,10 @@ export class UsersEntity extends SharedProp {
 
     @Column({ nullable: false })
     password: string;
+
+    @OneToMany('PostsEntity', (post: PostsEntity) => post.user, {
+        onDelete: "CASCADE",
+        onUpdate: 'CASCADE',
+    })
+    posts: Array<PostsEntity>;
 }

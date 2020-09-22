@@ -13,7 +13,7 @@
       "typeorm": "0.2.26"
    },
    "scripts": {
-      "start": "ts-node src/index.ts",
+      "start": "ts-node app.ts",
       "test": "echo \"Error: no test specified\" && exit 1",
       "ts-node": "ts-node"
 

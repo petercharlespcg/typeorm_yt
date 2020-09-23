@@ -6,7 +6,7 @@ import {
     PrimaryGeneratedColumn 
 } from 'typeorm';
 import { SharedProp } from './sharedProp.helper';
-import { UsersEntity } from './users_entity';
+import { UsersEntity } from '.';
 
 @Entity({ name: 'posts' })
 export class PostsEntity extends SharedProp {

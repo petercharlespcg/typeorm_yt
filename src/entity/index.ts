@@ -1,2 +1,2 @@
-// export { UsersEntity } from './users_entity';
-// export { PostsEntity } from './posts.entity';
+export { UsersEntity } from './users.entity';
+export { PostsEntity } from './posts.entity';

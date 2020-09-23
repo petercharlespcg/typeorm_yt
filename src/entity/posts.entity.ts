@@ -1,8 +1,10 @@
+import { CategoriesPostsEntity } from './categoriesPosts.entity';
 import { 
     Column, 
     Entity, 
     JoinColumn, 
     ManyToOne, 
+    OneToMany, 
     PrimaryGeneratedColumn 
 } from 'typeorm';
 import { SharedProp } from './sharedProp.helper';
@@ -26,4 +28,10 @@ export class PostsEntity extends SharedProp {
     // or custom referenced column
     @JoinColumn({name: 'user_id'})
     user: UsersEntity;
+
+    @OneToMany(
+        () => CategoriesPostsEntity,
+        (categoriesPosts: CategoriesPostsEntity) => categoriesPosts.post
+    )
+    categoriesPosts: Array<CategoriesPostsEntity>;
 }

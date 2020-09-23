@@ -1,4 +1,4 @@
-import { Connection, getConnection, Like, Repository } from 'typeorm';
+import { Connection, getConnection, Like, Raw, Repository } from 'typeorm';
 import { date, internet, name, random, lorem } from "faker";
 import { UsersEntity, PostsEntity } from './../entity';
 import { writeFileSync } from 'fs';

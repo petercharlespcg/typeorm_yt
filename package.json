@@ -8,6 +8,8 @@
       "typescript": "3.3.3333"
    },
    "dependencies": {
+      "@types/faker": "^5.1.0",
+      "faker": "^5.1.0",
       "pg": "^8.3.3",
       "reflect-metadata": "^0.1.10",
       "typeorm": "0.2.26"
@@ -16,6 +18,5 @@
       "start": "ts-node app.ts",
       "test": "echo \"Error: no test specified\" && exit 1",
       "ts-node": "ts-node"
-
    }
 }

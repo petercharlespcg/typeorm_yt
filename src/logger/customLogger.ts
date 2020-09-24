@@ -16,7 +16,7 @@ export class CustomLogger implements Logger {
     constructor() {
         this.customFormat = format.printf(
             ({message, level, label, timestamp}) => 
-            `${timestamp} [${label}] ${message}`);
+            `${timestamp} [${label}] ${level} ${message}`);
         const options = (filename: string) => ({
             transports: new transports.File({ filename, level: 'debug' }),
             format: this.customFormat

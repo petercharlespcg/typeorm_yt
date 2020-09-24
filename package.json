@@ -9,10 +9,12 @@
    },
    "dependencies": {
       "@types/faker": "^5.1.0",
+      "@types/winston": "^2.4.4",
       "faker": "^5.1.0",
       "pg": "^8.3.3",
       "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.26"
+      "typeorm": "0.2.26",
+      "winston": "^3.3.3"
    },
    "scripts": {
       "start": "ts-node app.ts",

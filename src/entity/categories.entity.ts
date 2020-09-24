@@ -12,6 +12,10 @@ import { SharedProp } from "./sharedProp.helper";
 
 @Entity({ name: 'categories' })
 export class CategoriesEntity extends SharedProp {
+    constructor(label: string) {
+        super();
+        this.label = label;
+    }
     @PrimaryGeneratedColumn()
     id: number;
 

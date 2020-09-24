@@ -11,9 +11,8 @@ const app = async () => {
     // Can be used only after connection to the database is established.
     // pass true to drop everything b4 creating anything
     // await connection.synchronize(true);
-    await connection.synchronize(false);
-    // await createUsers(connection);
-    await readUsers(connection);
+    await connection.synchronize(true/* false */);
+    await createUsers(connection); // await readUsers(connection);
 };
 
 app();

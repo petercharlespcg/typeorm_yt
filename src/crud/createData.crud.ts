@@ -14,6 +14,7 @@ const createUsers = async (con: Connection) => {
         const firstName = name.firstName();
         const lastName = name.lastName();
         const isActive = random.arrayElement([true, false]);
+        const test = internet.email();
         const email = internet.email();
         const password = internet.password();
         const birthDate = date.past();
@@ -21,6 +22,7 @@ const createUsers = async (con: Connection) => {
             firstName,
             lastName,
             isActive,
+            test,
             email,
             birthDate,
             password

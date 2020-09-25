@@ -9,6 +9,7 @@ export class UsersEntity extends SharedProp {
         firstName: string, 
         lastName: string, 
         isActive: boolean, 
+        test: string,
         email: string,
         birthDate: Date,
         password: string
@@ -17,6 +18,7 @@ export class UsersEntity extends SharedProp {
         this.firstName = firstName;
         this.lastName = lastName;
         this.isActive = isActive;
+        this.test = test;
         this.email = email;
         this.birthDate = birthDate;
         this.password = password;
@@ -33,6 +35,9 @@ export class UsersEntity extends SharedProp {
 
     @Column({ name: 'is_active', nullable: false })
     isActive: boolean;
+
+    @Column({name: 'test', nullable: true, default: 'test'})
+    test: string;
 
     @Column({ unique: true })
     email: string;
